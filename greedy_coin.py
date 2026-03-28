@@ -1,4 +1,5 @@
-import click 
+#!/usr/bin/env python3
+import click
 
 def greedy_coin(change):
         
@@ -12,7 +13,7 @@ def greedy_coin(change):
         coin_dict[coin] = 0
     for coin in coins:
         while change >= coin:
-            change = round(change - coin, 2)
+            change -= coin
             coin_dict[coin] += 1
     for coin in coin_dict:
         if coin_dict[coin] > 0:
